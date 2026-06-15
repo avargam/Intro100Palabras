@@ -88,18 +88,6 @@ a { color: inherit; }
 
 .brand-accent { color: var(--accent); }
 
-.avatar {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--teal);
-  color: #fff;
-  font-size: 1.05rem;
-  user-select: none;
-}
-
 /* ===== Hero ===== */
 .hero {
   position: relative;
