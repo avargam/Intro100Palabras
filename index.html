@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro · 100 Palabras</title>
+  <meta name="description" content="Concurso literario de microrrelatos de 100 palabras." />
+
+  <!-- Open Graph (para compartir en redes) -->
+  <meta property="og:title" content="Intro · 100 Palabras" />
+  <meta property="og:description" content="Concurso literario de microrrelatos de 100 palabras." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Concurso literario</p>
+      <h1 class="site-title">Intro<span class="dot">·</span>100&nbsp;Palabras</h1>
+      <p class="site-tagline">
+        Microrrelatos de exactamente cien palabras. Pocas palabras, mucha historia.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="entradas-title">
+      <div class="section-head">
+        <h2 id="entradas-title">Entradas</h2>
+        <p class="count" id="entry-count" aria-live="polite"></p>
+      </div>
+
+      <div id="entries" class="entries-grid">
+        <!-- Las entradas se renderizan aquí desde assets/js/main.js -->
+      </div>
+
+      <p id="empty-state" class="empty-state" hidden>
+        Todavía no hay entradas publicadas. ¡Vuelve pronto!
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Intro · 100 Palabras — Concurso de microrrelatos.</p>
+    </div>
+  </footer>
+
+  <!-- Datos primero, luego la lógica que los usa -->
+  <script src="data/entradas.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
