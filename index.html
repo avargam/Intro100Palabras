@@ -13,23 +13,46 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <p class="eyebrow">Concurso literario</p>
-      <h1 class="site-title">Intro<span class="dot">·</span>100&nbsp;Palabras</h1>
-      <p class="site-tagline">
-        Microrrelatos de exactamente cien palabras. Pocas palabras, mucha historia.
+  <!-- ===== Barra de navegación ===== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M6 5l6 7-6 7M13 5l6 7-6 7" stroke="white" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="brand-text">Intro<span class="brand-accent">100</span></span>
+      </a>
+      <span class="avatar" aria-hidden="true">✍︎</span>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <span class="dots dots--tl" aria-hidden="true"></span>
+    <span class="dots dots--br" aria-hidden="true"></span>
+    <div class="container hero-inner">
+      <p class="eyebrow">Concurso literario de microrrelatos</p>
+      <h1 class="hero-title">
+        Cien palabras,<br /><span class="accent">una historia</span>
+      </h1>
+      <p class="hero-tagline">
+        Relatos de exactamente cien palabras. Pocas palabras, mucha historia.
       </p>
+      <a class="btn" href="#entradas">Leer las entradas</a>
     </div>
   </header>
 
+  <!-- ===== Entradas ===== -->
   <main class="container">
-    <section aria-labelledby="entradas-title">
+    <section id="entradas" aria-labelledby="entradas-title">
       <div class="section-head">
         <h2 id="entradas-title">Entradas</h2>
         <p class="count" id="entry-count" aria-live="polite"></p>
@@ -45,6 +68,7 @@
     </section>
   </main>
 
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container">
       <p>Intro · 100 Palabras — Concurso de microrrelatos.</p>
