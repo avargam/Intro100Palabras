@@ -158,6 +158,9 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  align-self: flex-start;   /* no estirarse al ancho de la tarjeta */
+  width: 240px;             /* mismo largo en todas las entradas */
+  max-width: 100%;          /* se adapta en tarjetas muy estrechas */
   margin-top: 4px;
   padding: 11px 16px;
   border: 1.5px solid var(--accent);
