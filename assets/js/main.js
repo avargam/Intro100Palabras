@@ -56,9 +56,20 @@
     });
   }
 
+  // Orden aleatorio en cada carga, para reducir el sesgo de posición.
+  function barajar(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = tmp;
+    }
+    return arr;
+  }
+
   var fragment = document.createDocumentFragment();
 
-  entradas.forEach(function (entrada) {
+  barajar(entradas.slice()).forEach(function (entrada) {
     var card = el("article", "entry-card");
 
     card.appendChild(el("h3", "entry-title", entrada.titulo || "Sin título"));
@@ -104,6 +115,18 @@
     var fechaTxt = formatearFecha(entrada.fecha);
     if (fechaTxt) meta.appendChild(el("span", null, fechaTxt));
     card.appendChild(meta);
+
+    // Botón de voto por entrada. PLACEHOLDER: define `votoUrl` en cada entrada
+    // de data/entradas.js para enlazarlo; si falta, queda como "#".
+    var voto = el("a", "entry-vote", "Votar por esta entrada");
+    if (entrada.votoUrl) {
+      voto.href = entrada.votoUrl;
+      voto.target = "_blank";
+      voto.rel = "noopener";
+    } else {
+      voto.href = "#";
+    }
+    card.appendChild(voto);
 
     fragment.appendChild(card);
   });

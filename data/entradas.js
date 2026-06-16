@@ -9,6 +9,8 @@
     titulo    → Título de la entrada.
     autor     → Nombre o seudónimo del autor.
     fecha     → (opcional) Fecha de la entrada, formato "AAAA-MM-DD".
+    votoUrl   → (opcional) URL para votar por esta entrada. Si falta, el
+                botón "Votar por esta entrada" queda como placeholder (#).
 
   El contenido puede ser de DOS tipos (usa uno u otro):
     texto     → Texto normal. Se respetan los espacios y los saltos de
