@@ -29,6 +29,7 @@ const ENTRADAS = [
   {
     titulo: "Intro a la Progra, día 1",
     autor: "Anónimo",
+    votoUrl: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-tn1Xz_4wUqk0utI6goA0iJdcNPFUwlPptoFlh_LZH1UNzE3UERQVjFCS1BZTU9SWDhGVEFORzFIVy4u&r3ff101a466274ac09e917ca1baf3da83=%22Intro%20a%20la%20Progra%2C%20d%C3%ADa%201%22",
     lenguaje: "Python",
     codigo:
 `from random import randint
@@ -52,6 +53,7 @@ intro_a_progra_dia_1(S1_2026)
   {
     titulo: "¿Quién lo diría?",
     autor: "Anónimo",
+    votoUrl: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-tn1Xz_4wUqk0utI6goA0iJdcNPFUwlPptoFlh_LZH1UNzE3UERQVjFCS1BZTU9SWDhGVEFORzFIVy4u&r3ff101a466274ac09e917ca1baf3da83=%22%C2%BFQui%C3%A9n%20lo%20dir%C3%ADa%3F%22",
     texto:
 `Quién diría que aquel niño,
 que a veces por las tardes tenía que arrear ovejas
@@ -72,6 +74,7 @@ por cambiarme la vida <3.`,
     titulo: "Nunca uses el Clearn a las 3:33 AM",
     autor: "Anónimo",
     mono: true,
+    votoUrl: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-tn1Xz_4wUqk0utI6goA0iJdcNPFUwlPptoFlh_LZH1UNzE3UERQVjFCS1BZTU9SWDhGVEFORzFIVy4u&r3ff101a466274ac09e917ca1baf3da83=%22Nunca%20uses%20el%20Clearn%20a%20las%203%3A33%20AM%22",
     texto:
 `#######################################################
 ### Creepypasta: Nunca uses el Clearn a las 3:33AM. ###
@@ -105,6 +108,7 @@ Nunca usen el Clearn a las 3:33 de la mañana.`,
   {
     titulo: "Clearn se caerá en 12 días",
     autor: "Anónimo",
+    votoUrl: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-tn1Xz_4wUqk0utI6goA0iJdcNPFUwlPptoFlh_LZH1UNzE3UERQVjFCS1BZTU9SWDhGVEFORzFIVy4u&r3ff101a466274ac09e917ca1baf3da83=%22Clearn%20se%20caer%C3%A1%20en%2012%20d%C3%ADas%22",
     lenguaje: "Python",
     fecha: "2026-06-16",
     codigo:
