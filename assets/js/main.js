@@ -72,9 +72,17 @@
     if (esCodigo) {
       // Bloque de código: se respeta la indentación y los saltos de línea.
       var pre = el("pre", "entry-code");
-      pre.appendChild(el("code", null, entrada.codigo));
+      var codeEl = el("code", null, entrada.codigo);
+      if (entrada.lenguaje) {
+        codeEl.className = "language-" + String(entrada.lenguaje).toLowerCase();
+      }
+      pre.appendChild(codeEl);
       card.classList.add("entry-card--code");
       card.appendChild(pre);
+      // Resaltado de sintaxis (opera sobre textContent → sin riesgo de inyección).
+      if (window.hljs && typeof hljs.highlightElement === "function") {
+        try { hljs.highlightElement(codeEl); } catch (e) {}
+      }
     } else {
       var body = el("div", "entry-body");
       // mono: texto monoespaciado, sin partir líneas (para arte ASCII,

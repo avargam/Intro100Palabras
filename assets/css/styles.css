@@ -290,6 +290,13 @@ main { padding: 24px 0 88px; }
 
 .entry-code code { font-family: inherit; }
 
+/* highlight.js: usar el fondo del editor (#0f172a), no el del tema */
+.entry-code code.hljs {
+  background: transparent;
+  padding: 0;
+  color: #e2e8f0;
+}
+
 .entry-meta {
   margin-top: auto;
   padding-top: 14px;
