@@ -68,12 +68,26 @@
       card.appendChild(el("p", "entry-author", "por " + entrada.autor));
     }
 
-    var body = el("div", "entry-body");
-    renderTexto(body, entrada.texto);
-    card.appendChild(body);
+    var esCodigo = typeof entrada.codigo === "string" && entrada.codigo !== "";
+
+    if (esCodigo) {
+      // Bloque de código: se respeta la indentación y los saltos de línea.
+      var pre = el("pre", "entry-code");
+      pre.appendChild(el("code", null, entrada.codigo));
+      card.classList.add("entry-card--code");
+      card.appendChild(pre);
+    } else {
+      var body = el("div", "entry-body");
+      renderTexto(body, entrada.texto);
+      card.appendChild(body);
+    }
 
     var meta = el("div", "entry-meta");
-    meta.appendChild(el("span", null, contarPalabras(entrada.texto) + " palabras"));
+    if (esCodigo) {
+      meta.appendChild(el("span", null, entrada.lenguaje || "Código"));
+    } else {
+      meta.appendChild(el("span", null, contarPalabras(entrada.texto) + " palabras"));
+    }
     var fechaTxt = formatearFecha(entrada.fecha);
     if (fechaTxt) meta.appendChild(el("span", null, fechaTxt));
     card.appendChild(meta);
