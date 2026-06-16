@@ -2,7 +2,10 @@
 (function () {
   "use strict";
 
-  var entradas = Array.isArray(window.ENTRADAS) ? window.ENTRADAS : [];
+  // ENTRADAS se declara con `const` en data/entradas.js. Las variables const/let
+  // del ámbito global NO se adjuntan a `window`, así que la referenciamos directo.
+  var entradas =
+    typeof ENTRADAS !== "undefined" && Array.isArray(ENTRADAS) ? ENTRADAS : [];
 
   var grid = document.getElementById("entries");
   var countEl = document.getElementById("entry-count");
