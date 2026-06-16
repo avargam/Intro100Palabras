@@ -39,14 +39,10 @@
     return limpio.split(/\s+/).length;
   }
 
-  // Convierte saltos de línea en párrafos
+  // Vuelca el texto tal cual: los espacios y saltos de línea se respetan
+  // mediante CSS (white-space: pre-wrap en .entry-body).
   function renderTexto(contenedor, texto) {
-    String(texto || "")
-      .split(/\n+/)
-      .filter(function (p) { return p.trim() !== ""; })
-      .forEach(function (parrafo) {
-        contenedor.appendChild(el("p", null, parrafo.trim()));
-      });
+    contenedor.textContent = String(texto || "");
   }
 
   function formatearFecha(fecha) {
@@ -81,6 +77,12 @@
       card.appendChild(pre);
     } else {
       var body = el("div", "entry-body");
+      // mono: texto monoespaciado, sin partir líneas (para arte ASCII,
+      // tracebacks, etc.). Ocupa todo el ancho y permite scroll horizontal.
+      if (entrada.mono) {
+        body.classList.add("entry-body--mono");
+        card.classList.add("entry-card--mono");
+      }
       renderTexto(body, entrada.texto);
       card.appendChild(body);
     }

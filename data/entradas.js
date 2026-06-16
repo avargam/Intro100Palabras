@@ -11,11 +11,12 @@
     fecha     → (opcional) Fecha de la entrada, formato "AAAA-MM-DD".
 
   El contenido puede ser de DOS tipos (usa uno u otro):
-    texto     → Texto normal. Usa \n para separar párrafos.
-    codigo    → Bloque de código. Se respeta tal cual (indentación,
-                saltos de línea). Escríbelo entre `comillas invertidas`
-                y SIN sangrar las líneas dentro del archivo, porque esa
-                sangría también se mostraría. Para una barra invertida
+    texto     → Texto normal. Se respetan los espacios y los saltos de
+                línea tal como los escribas. Escríbelo entre `comillas
+                invertidas` y SIN sangrar las líneas dentro del archivo
+                (esa sangría también se mostraría).
+    codigo    → Bloque de código (editor oscuro, ancho completo). Mismas
+                reglas de escritura que `texto`. Para una barra invertida
                 literal escribe doble: \\
     lenguaje  → (opcional, solo con `codigo`) Etiqueta que se muestra,
                 p. ej. "Python".
@@ -23,6 +24,82 @@
 */
 
 const ENTRADAS = [
+  {
+    titulo: "Intro a la Progra, día 1",
+    autor: "Anónimo",
+    lenguaje: "Python",
+    codigo:
+`from random import randint
+
+def intro_a_progra_dia_1(semestre):
+    pensamientos = ['','!', '!!', '?', '...',
+                    ' :D', ' :)', ' BD', ':P',
+                    ' :(', ' :v', ' u.u', ' ;)',
+                    ' <3', ' :3', ' .-.', ' =O',
+                    ' :/', ' =[', ' ^.^', ' >.<',
+                    ' -_-;', ' 0_0', ' >=D', ' ~o~']
+
+    for estudiante in range(1, semestre):
+        pensamiento = pensamientos[randint(0, len(pensamientos) - 1)]
+        print('Estudiante ' + str(estudiante) + ': Hello World' + pensamiento)
+
+S1_2026 = 12
+intro_a_progra_dia_1(S1_2026)
+`,
+  },
+  {
+    titulo: "¿Quién lo diría?",
+    autor: "Anónimo",
+    texto:
+`Quién diría que aquel niño,
+que a veces por las tardes tenía que arrear ovejas
+para ayudar a su familia,
+ese mismo que para tener internet tenía que esperar ir al pueblo,
+porque donde vivía nunca había señal,
+y que con suerte sabía cómo encender un computador,
+terminaría enamorándose de la programación
+gracias a un ramo que dio en su segundo semestre de universidad,
+tanto así que decidió cambiar su major
+y ahora también es ayudante de ese ramo.
+
+Ese niño soy yo,
+y esta es una forma de agradecer a Intro a la Progra
+por cambiarme la vida <3.`,
+  },
+  {
+    titulo: "Nunca uses el Clearn a las 3:33 AM",
+    autor: "Anónimo",
+    mono: true,
+    texto:
+`#######################################################
+### Creepypasta: Nunca uses el Clearn a las 3:33AM. ###
+#######################################################
+
+Eran las 3 de la mañana y me di cuenta que se me había olvidado resolver el set que
+era para el día anterior, por lo que me puse a hacerlo inmediatamente.
+
+Pude hacer los primeros dos ejercicios sin problemas, pero cuando traté de entrar al
+tercero se demoró mucho en cargar, y en eso aparecieron imágenes fugaces de un
+hombre rubio con cara naranja cubierta de sangre, pero no le dí importancia.
+
+Una vez cargó, me puse a resolver el ejercicio. Cuando le dí a ejecutar se volvió a
+demorar mucho tiempo hasta que fueron las 3:33 AM, pero me aparecieron todos los
+tests en amarillo, con un error que decía:
+
+Traceback (most recent call last):
+  File "code.py", line 333, in <module>
+    hora = 2026-06-08T03:33:33-04:00
+ClearnError: Prepárate para morir.
+
+De nuevo no le dí importancia, pero de repente empezó a salir una persona de mi
+pantalla y en eso me dí cuenta que era Peachy Head lleno de sangre. Rápidamente salí
+de mi casa, pero al mirar atrás me dí cuenta que él estaba corriendo detrás de mí.
+
+Ahora mismo estoy escondido, pero escucho a Peachy Head acercarse. Escribo esto antes
+de que sea muy tarde para otros:
+
+Nunca usen el Clearn a las 3:33 de la mañana.`,
+  },
   {
     titulo: "Clearn se caerá en 12 días",
     autor: "Anónimo",
@@ -61,23 +138,5 @@ if matar_clearn:
         for i in range(314752898099857467687980985746):
             print("🤪🤪🤪🤪🤪🤪🤪🤪🤪🤪🤪🤪🤪")
 `,
-  },
-  {
-    titulo: "El último tren",
-    autor: "A. Mendoza",
-    texto:
-      "Esperó en el andén todas las noches durante treinta años. El reloj marcaba siempre las once y cuarto, la misma hora en que ella prometió volver.\n" +
-      "Nunca preguntó por qué el tren no llegaba. Le bastaba con creer que, en algún lugar, ella seguía en camino.\n" +
-      "La noche que murió, el andén estaba vacío. Pero a las once y cuarto, por primera vez, se oyó un silbato a lo lejos.",
-    fecha: "2026-06-01",
-  },
-  {
-    titulo: "Inventario",
-    autor: "Seudónimo: Lince",
-    texto:
-      "Conté mis pertenencias antes de marcharme: dos camisas, un reloj parado, la fotografía de un perro que ya no recordaba.\n" +
-      "Al final de la lista escribí tu nombre. No cabía en ninguna maleta, pero pesaba más que todo lo demás.\n" +
-      "Cerré la puerta. Dejé el inventario sobre la mesa, por si alguien quería saber qué fue lo único que no me llevé.",
-    fecha: "2026-06-03",
   },
 ];

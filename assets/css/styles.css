@@ -250,11 +250,24 @@ main { padding: 24px 0 88px; }
 .entry-body {
   margin: 0;
   color: var(--ink-soft);
-  white-space: pre-line;
+  white-space: pre-wrap;       /* respeta espacios y saltos de línea del texto */
+  overflow-wrap: break-word;   /* evita que líneas muy largas rompan el ancho */
 }
 
-.entry-body p { margin: 0 0 0.8em; }
-.entry-body p:last-child { margin-bottom: 0; }
+/* Texto monoespaciado (arte ASCII, tracebacks): ancho completo, sin partir
+   líneas y con scroll horizontal si hace falta. Tarjeta clara, no de código. */
+.entry-card--mono { grid-column: 1 / -1; }
+
+.entry-body--mono {
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Code", "JetBrains Mono",
+    "Consolas", monospace;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  color: var(--ink);
+}
 
 /* Entradas de código: la tarjeta ocupa todo el ancho para dar aire al código */
 .entry-card--code { grid-column: 1 / -1; }
